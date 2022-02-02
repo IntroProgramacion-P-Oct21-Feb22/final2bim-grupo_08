@@ -7,32 +7,37 @@
 
 
 def main():
-    contador = 1
     condicionString = "seguir"
+    contador = 0
     while condicionString:
         print ("Ingrese un número para ingresar una cuenta\n[1] Facebook\n[2] Twitter\n[3] WhatsApp\n[4] Telegram\n[5] Signal\n[6] Instagram\n[7] Flickr")
         opcion = int(input("Ingrese una opción: "))
         if opcion == 1:
+            contador = 1
             print(crearFacebook())
         elif opcion == 2:
+            contador = 1
             crearTwitter()
         elif opcion == 3:
+            contador = 1
             print(crearWhatsapp())
         elif opcion == 4:
+            contador = 1
             crearTelegram()
         elif opcion == 5:
+            contador = 1
             print(crearSignal())
         elif opcion == 6:
+            contador = 1
             crearInstagram()
         elif opcion == 7:
+            contador = 1
             print(crearFlickr())
         else:
             print("No existe la opción ingresada")
         print("Ingrese 'seguir' para introducir otra cuenta")
         condicionString = input()
-        if condicionString == "seguir":
-            contador += 1
-        else:
+        if condicionString != "seguir":
             print("Ha finalizado la creación de cuentas de redes sociales")
             break
     mensajeFinal = obtenerMensaje(contador)
@@ -125,12 +130,15 @@ def crearFlickr():
 
 def obtenerMensaje(contador):
     mensajeFinal = ["campaña con poca afluencia", "campaña moderada siga adelante", "Excelente campaña"]
+    cadena = ""
     if contador >= 1 and contador <= 5:
         cadena = mensajeFinal[0]
     elif contador > 5 and contador <= 15:
         cadena = mensajeFinal[1]
-    else:
+    elif contador > 15:
         cadena = mensajeFinal[2]
+    else:
+        print("No se han registrado cuentas")
     return cadena
 
     
