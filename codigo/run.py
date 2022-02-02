@@ -49,6 +49,10 @@ def main():
 def crearFacebook():
     """
         explicación de método
+        Se empieza pidiendo los datos del usuario para la creación de cuenta
+        todas son de tipo string a excepción de la edad, que es tipo entero
+        al final se reune todos los datos que el usuario ingresó y hace un retorno
+        a la función principal para que pueda imprimirlo
     """
     usuario = input("Ingrese su nombre de usuario: ")
     edad = int(input("Ingrese su edad: "))
@@ -62,6 +66,10 @@ def crearFacebook():
 def crearTwitter():
     """
         explicación de método
+        Se empieza pidiendo los datos del usuario para la creación de cuenta
+        todas son de tipo string a excepción de la edad, que es tipo entero
+        al final se reune todos los datos que el usuario ingresó y en este caso no hace un retorno a
+        a la función principal, si no que imprime directamente los datos
     """
     usuario = input("Ingrese su nombre de usuario: ")
     nombres = input("Ingrese su nombre: ")
