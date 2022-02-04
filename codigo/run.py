@@ -13,25 +13,25 @@ def main():
         print ("Ingrese un número para ingresar una cuenta\n[1] Facebook\n[2] Twitter\n[3] WhatsApp\n[4] Telegram\n[5] Signal\n[6] Instagram\n[7] Flickr")
         opcion = int(input("Ingrese una opción: "))
         if opcion == 1:
-            contador = 1
+            contador = contador + 1
             print(crearFacebook())
         elif opcion == 2:
-            contador = 1
+            contador = contador + 1
             crearTwitter()
         elif opcion == 3:
-            contador = 1
+            contador = contador + 1
             print(crearWhatsapp())
         elif opcion == 4:
-            contador = 1
+            contador = contador + 1
             crearTelegram()
         elif opcion == 5:
-            contador = 1
+            contador = contador + 1
             print(crearSignal())
         elif opcion == 6:
-            contador = 1
+            contador = contador + 1
             crearInstagram()
         elif opcion == 7:
-            contador = 1
+            contador = contador + 1
             print(crearFlickr())
         else:
             print("No existe la opción ingresada")
@@ -82,9 +82,7 @@ def crearTwitter():
     print("Datos de la cuenta Twitter:\nUsuario: %s\nNombres: %s\nApellidos: %s\nEdad: %d\nCiudad: %s\nPais: %s\nIdioma: %s\nCorreo: %s" % (usuario, nombres, apellidos, edad, ciudad, pais, idioma, correo))
 
 def crearWhatsapp():
-    """
-        explicación de método
-    """
+
     usuario = input("Ingrese su nombre de usuario: ")
     telefono = input("Ingrese su número de teléfono: ")
     edad = int(input("Ingrese su edad: "))
@@ -94,9 +92,7 @@ def crearWhatsapp():
     return cadena
 
 def crearTelegram():
-    """
-        explicación de método
-    """
+
     usuario = input("Ingrese su nombre de usuario: ")
     telefono = input("Ingrese su número de teléfono: ")
     ciudad = input("Ingrese su ciudad: ")
@@ -105,9 +101,7 @@ def crearTelegram():
     print("Datos de la cuenta Telegram:\nUsuario: %s\nTeléfono: %s\nCiudad: %s\nPais: %s\nÁrea: %s" % (usuario, telefono, ciudad, pais, area))
 
 def crearSignal():
-    """
-        explicación de método
-    """
+
     usuario = input("Ingrese su nombre de usuario: ")
     telefono = input("Ingrese su número de teléfono: ")
     ciudad = input("Ingrese su ciudad: ")
@@ -128,9 +122,7 @@ def crearInstagram():
     
 
 def crearFlickr():
-    """
-        explicación de método
-    """
+
     usuario = input("Ingrese su nombre de usuario: ")
     correo = input("Ingrese su correo: ")
     cadena = ("Datos de la cuenta Flickr:\nUsuario: %s\nCorreo: %s" % (usuario, correo))
@@ -148,7 +140,7 @@ def obtenerMensaje(contador):
     else:
         print("No se han registrado cuentas")
     return cadena
-
+main()
     
 
 # agregar los métodos faltantes
@@ -166,4 +158,3 @@ def obtenerMensaje(contador):
 #     crearFacebook()
 #     cuenta_twitter = crearTwitter()
 #     print(cuenta_twitter)
-main()
