@@ -5,6 +5,8 @@
 
 ### Problemática a resolver
 
+Integrantes del Grupo: Felipe Jiménez y José David Piedra
+
 Generar un solución en lenguaje de programación Python
 
 Que permita ingresar nuevas cuentas de diversas plataformas. Las plataformas son:
