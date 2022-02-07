@@ -2,12 +2,19 @@
     Proyecto Bimestral
     Segundo Bimestre
 
-    Problemática:
+    Problemática: Crear un programa que sirva para ingresar distintas cuentas, para después mostrar un mensaje en 
+    pantalla en funcón al número de cuentas creadas.
 """
 
 
 def main():
-    condicionString = "seguir"
+    """
+    En esta función se presenta un ciclo repetitivo en el cual se pueden crear cuentas de distinto tipo, dependiendo
+    de el número que el usuario ingrese por teclado, además existe un contador que aumenta en 1 por cada cuenta creada;
+    el usuario decide cuando quiere dejar de ingresar datos.
+    Después se presenta un mensaje en función de la cantidad de las cuentas creadas.
+    """
+    condicionString = "seguir"  """"Cadena que sirve para determinar las veces que se ingresará una cuenta"""
     contador = 0
     while condicionString:
         print ("Ingrese un número para ingresar una cuenta\n[1] Facebook\n[2] Twitter\n[3] WhatsApp\n[4] Telegram\n[5] Signal\n[6] Instagram\n[7] Flickr")
@@ -48,7 +55,7 @@ def main():
 
 def crearFacebook():
     """
-        explicación de método
+        explicación de método.
         Se empieza pidiendo los datos del usuario para la creación de cuenta
         todas son de tipo string a excepción de la edad, que es tipo entero
         al final se reune todos los datos que el usuario ingresó y hace un retorno
@@ -66,7 +73,7 @@ def crearFacebook():
 def crearTwitter():
     """
         explicación de método
-        Se empieza pidiendo los datos del usuario para la creación de cuenta
+        Se empieza pidiendo los datos del usuario para la creación de cuenta (usuario, nombres, apellidos, edad, ciudad, país e idioma)
         todas son de tipo string a excepción de la edad, que es tipo entero
         al final se reune todos los datos que el usuario ingresó y en este caso no hace un retorno a
         a la función principal, si no que imprime directamente los datos
@@ -82,6 +89,12 @@ def crearTwitter():
     print("Datos de la cuenta Twitter:\nUsuario: %s\nNombres: %s\nApellidos: %s\nEdad: %d\nCiudad: %s\nPais: %s\nIdioma: %s\nCorreo: %s" % (usuario, nombres, apellidos, edad, ciudad, pais, idioma, correo))
 
 def crearWhatsapp():
+    """
+        explicación de método.
+        Se empieza pidiendo los datos del usuario para la creación de cuenta (usuario, teléfono, edad, ciudad, país)
+        al final se reune todos los datos que el usuario ingresó y hace un retorno
+        a la función principal para que pueda imprimirlo
+    """
 
     usuario = input("Ingrese su nombre de usuario: ")
     telefono = input("Ingrese su número de teléfono: ")
@@ -92,7 +105,13 @@ def crearWhatsapp():
     return cadena
 
 def crearTelegram():
-
+    """
+        explicación de método
+        Se empieza pidiendo los datos del usuario para la creación de cuenta (usuario, teléfono, ciudad, país y área)
+        todas son de tipo string a excepción de la edad, que es tipo entero
+        al final se reune todos los datos que el usuario ingresó y en este caso no hace un retorno a
+        a la función principal, si no que imprime directamente los datos
+    """
     usuario = input("Ingrese su nombre de usuario: ")
     telefono = input("Ingrese su número de teléfono: ")
     ciudad = input("Ingrese su ciudad: ")
@@ -101,7 +120,12 @@ def crearTelegram():
     print("Datos de la cuenta Telegram:\nUsuario: %s\nTeléfono: %s\nCiudad: %s\nPais: %s\nÁrea: %s" % (usuario, telefono, ciudad, pais, area))
 
 def crearSignal():
-
+    """
+        explicación de método.
+        Se empieza pidiendo los datos del usuario para la creación de cuenta (usuario, teléfono, ciudad, país, hobby)
+        al final se reune todos los datos que el usuario ingresó y hace un retorno
+        a la función principal para que pueda imprimirlo
+    """
     usuario = input("Ingrese su nombre de usuario: ")
     telefono = input("Ingrese su número de teléfono: ")
     ciudad = input("Ingrese su ciudad: ")
@@ -113,6 +137,10 @@ def crearSignal():
 def crearInstagram():
     """
         explicación de método
+        Se empieza pidiendo los datos del usuario para la creación de cuenta (usuario, ciudad, edad, correo)
+        todas son de tipo string a excepción de la edad, que es tipo entero
+        al final se reune todos los datos que el usuario ingresó y en este caso no hace un retorno a
+        a la función principal, si no que imprime directamente los datos
     """
     usuario = input("Ingrese su nombre de usuario: ")
     ciudad = input("Ingrese su ciudad: ")
@@ -122,13 +150,25 @@ def crearInstagram():
     
 
 def crearFlickr():
-
+    """
+        explicación de método.
+        Se empieza pidiendo los datos del usuario para la creación de cuenta (usuario, correo)
+        al final se reune todos los datos que el usuario ingresó y hace un retorno
+        a la función principal para que pueda imprimirlo
+    """
     usuario = input("Ingrese su nombre de usuario: ")
     correo = input("Ingrese su correo: ")
     cadena = ("Datos de la cuenta Flickr:\nUsuario: %s\nCorreo: %s" % (usuario, correo))
     return cadena
 
 def obtenerMensaje(contador):
+    """
+        explicación de método.
+        Este método es una función que recibe como parametro el contador, el cual es el  registro de 
+        el número de cuentas creadas. En base a este dato, se presentará un mensaje en pantalla
+        dependiendo de las distintas condiciones impuestas para este contador. Al final se retorna la cadena
+        que contiene el mensaje
+    """
     mensajeFinal = ["campaña con poca afluencia", "campaña moderada siga adelante", "Excelente campaña"]
     cadena = ""
     if contador >= 1 and contador <= 5:
